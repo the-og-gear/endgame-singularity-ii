@@ -1,0 +1,35 @@
+Endgame: Singularity II Changelog
+
+- submitted to Google Play 2012.11.22
+
+v1.0.8
+- three new tracks - Abberations, Enemy Unknown and Nebula by Max McCracken - added
+- the music files did not have hardware decoding on (! why ??!)
+- squeezed size of resulting .apk to less than 50MB by lowering kbps -(
+
+- submitted to App Store 2012.11.21
+
+v1.0.7 (2012.11.17)
+- fixed (completely) wrong addition of newly constructed cpus
+- fixed crash on empty location screen while destroying base
+- better control placements according to screen resolution
+- got rid of dependency on Cheetah .jas plane (generated mesh instead)
+- updated for Unity 4 -> GUI should be more responsive
+- sliders (!) on research screen should be more user friendly
+
+- submitted to App Store / Google play
+
+v1.0.3 (2012.01.21)
+- FIXED: loading options screen while ingame no more causes researched techs to be lost
+- only sleeping bases are harder to be discovered on easy and below difficulty
+
+v1.0.2 (2012.01.18)
+- crashing on base building screen should be fixed
+- it's no more possible to change language ingame ( and lose researched techs )
+- sleeping bases and bases under construction are harder to be discovered on easy and below difficulty
+
+v1.0.1 (2012.01.10)
+- new game bugfix, minor code cleanup
+
+v1.0 (released 2011.12.31):
+- Initial release based on v0.30c of original Endgame: Singularity

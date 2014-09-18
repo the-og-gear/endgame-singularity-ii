@@ -1,0 +1,24 @@
+TODO:
+	- ? - allow no more than 99 bases pre location ( display )
+	- display resources left when building and item/s on base screen
+	- GUI matrix scaling for Android devices (more varying screen ratios than on iOS)
+	- Android HW buttons	
+	- better touch scrolling ( http://www.mindthecube.com/blog/2010/09/adding-iphone-touches-to-unitygui-scrollview )
+	- split dejavu fonts per language - now it suppor only english ( ascii set ) since unicode font textures are too big (more than 1024px) for older (pre 3rd gen) devices
+	- optimize GUI stuff / if (UnityEngine.Event.current.type == EventType.Repaint) ... /
+	- optimize night lightmap code, for bigger tex of earth its too slow
+	
+	- original todo items as of 0.30c
+	  ( note: the stats are completely removed in this version for now)
+    - Record more things (times that techs are complete, etc.)
+      for both "scores" and general statistics:
+        # saves.
+        # Bases constructed (per type)
+        # Bases discovered (per type per news/science...)
+        # Bases destroyed (per type)
+        # Money earned (huge)
+        # Time to completion
+        # of upgrades for all bases
+        # per-tech time to completion (from day 0 to start, then time to completion)
+    - Add more items.
+    - Get more items translatable.
