@@ -28,20 +28,20 @@ public class Backdrop : MonoBehaviour
 	void Start ()
 	{
 		//check that we are on a camera!
-		if(camera == null){
+		if(GetComponent<Camera>() == null){
 			Debug.LogError("Backdrop must be used on a camera!");
 			Destroy(this);
 			return;
 		}
 		
 		//error for attempting a backdrop placement beyond camera's far clip plane:
-		if(distance > camera.farClipPlane){
+		if(distance > GetComponent<Camera>().farClipPlane){
 			Debug.LogError("Backdrop's distance is further than the camera's far clip plane. Extend the camera's far clip plane or reduce the billboard's distance.");
 			return;
 		}
 		
 		//error for attempting a backdrop placement before camera's near clip plane:
-		if(distance < camera.nearClipPlane){
+		if(distance < GetComponent<Camera>().nearClipPlane){
 			Debug.LogError("Backdrop's distance is closer than the camera's near clip plane. Extend the distance or reduce the camera's near clip plane.");
 			return;
 		}
@@ -63,10 +63,10 @@ public class Backdrop : MonoBehaviour
 	{
 		float verticalInset = ( Screen.height / 100f ) * 10.6f;
 		return new Vector3[] {
-			backdrop.transform.InverseTransformPoint(camera.ScreenToWorldPoint(new Vector3(0,verticalInset,distance))),
-			backdrop.transform.InverseTransformPoint(camera.ScreenToWorldPoint(new Vector3(Screen.width,verticalInset,distance))),
-			backdrop.transform.InverseTransformPoint(camera.ScreenToWorldPoint(new Vector3(0,Screen.height - verticalInset,distance))),
-			backdrop.transform.InverseTransformPoint(camera.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height - verticalInset,distance)))
+			backdrop.transform.InverseTransformPoint(GetComponent<Camera>().ScreenToWorldPoint(new Vector3(0,verticalInset,distance))),
+			backdrop.transform.InverseTransformPoint(GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width,verticalInset,distance))),
+			backdrop.transform.InverseTransformPoint(GetComponent<Camera>().ScreenToWorldPoint(new Vector3(0,Screen.height - verticalInset,distance))),
+			backdrop.transform.InverseTransformPoint(GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width,Screen.height - verticalInset,distance)))
 		};
 	}
 }
