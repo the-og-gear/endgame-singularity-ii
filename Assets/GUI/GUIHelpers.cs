@@ -45,7 +45,7 @@ public class GUIHelpers
 		switch (UnityEngine.Event.current.GetTypeForControl (controlID))
 		{
 		
-		case EventType.mouseDown:
+		case EventType.MouseDown:
 			if (isMouseOver) {
 				// (note: isMouseOver will be false when another control is hot)
 				GUIUtility.hotControl = controlID;
@@ -55,7 +55,7 @@ public class GUIHelpers
 			
 			break;
 		
-		case EventType.mouseUp:
+		case EventType.MouseUp:
 			if (GUIUtility.hotControl == controlID)
 				GUIUtility.hotControl = 0;
 			if (bounds.Contains (UnityEngine.Event.current.mousePosition))

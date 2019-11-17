@@ -241,9 +241,9 @@ public class MapScreen : MonoBehaviour, IESGUIDialog
 	
 	void Awake ()
 	{
-		this.maprenderer = this.gameObject.transform.FindChild ("Map").gameObject.GetComponent<MeshRenderer>();
+		this.maprenderer = this.gameObject.transform.Find ("Map").gameObject.GetComponent<MeshRenderer>();
 		
-		this.splash = this.gameObject.transform.FindChild ("Splash").GetComponent<GUITexture>();
+		this.splash = this.gameObject.transform.Find ("Splash").GetComponent<GUITexture>();
 		
 		G.map_screen = this;
 	}
